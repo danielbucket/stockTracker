@@ -1,0 +1,10 @@
+.main_container {
+	grid-column: Main;
+	color: blue;
+	font-size: 1.5em;
+
+	display: grid;
+	grid-template-columns:
+		[left] 50fr
+		[right] 50fr;
+}

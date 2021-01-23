@@ -1,3 +1,34 @@
+:root {}
+
+html {
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	margin: 0;
+}
+
+body {
+	margin: 0;
+  box-sizing: border-box;
+}
+
+p {
+	margin: 0;
+}
+
 .app_container {
-	color: red;
+	background-color: black;
+	min-height: 100vh;
+	min-width: 100vw;
+
+	display: grid;
+	grid-template-rows: 
+		[Header] 10em
+		[Main] auto
+		[Footer] 5em;
+		grid-row-gap: .125em;
 }

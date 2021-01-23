@@ -18,6 +18,7 @@ app.use(
     publicPath: config.output.publicPath,
   })
 );
+
 app.use(bodyParser.urlencoded({ extended:true }));
 app.use(express.static(path.join(__dirname + './../public/')));
 

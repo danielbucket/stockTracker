@@ -1,19 +1,20 @@
-import _ from 'lodash';
+import '../src/assets/normalize.css';
 import './style.css';
-import TickerModule from './components/tickerModule.js';
+import Main from './components/Main';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
-function component() {
+function App() {
   let element = document.createElement('div');
       element.classList.add('app_container');
-      element.innerHTML = 'Component Container';
 
   Promise.all([
-      element.appendChild(TickerModule()),
-      element.appendChild(Header())
+      element.appendChild(Header()),
+      element.appendChild(Main()),
+      element.appendChild(Footer()),
     ]);
 
   return element;
 };
 
-document.body.appendChild(component());
+document.body.appendChild(App());
