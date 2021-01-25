@@ -3,8 +3,67 @@
 	color: blue;
 	font-size: 1.5em;
 
+	display: flex;
+	flex-direction: row;
+}
+
+.left_window_container {
+	width: calc(50% - .5em);
+	height: calc(100% - .5em);
+	margin: auto;
+	border: .125em solid black;
+
 	display: grid;
-	grid-template-columns:
-		[left] 50fr
-		[right] 50fr;
+	grid-template-rows:
+		[stock_names] 3em
+		[data_columns] calc(100% - 3em);
+}
+
+.tab_names {
+	display: inline-grid;
+	grid-template-columns: 30fr 20fr 30fr 20fr;
+}
+
+.tab_name {
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	border: .125em solid black;
+}
+
+.stock_names {
+	grid-row: stock_names;
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.stock_cards {
+	grid-row: data_columns;
+
+	display: grid;
+	flex-direction: column;
+}
+
+.stock_card {
+	border: .125em solid black;
+	border-radius: .25em;
+
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+}
+
+
+
+
+
+
+.right_window_container {
+	width: calc(50% - .5em);
+	height: calc(100% - .5em);
+	margin: auto;
+	border: .125em solid black;
 }
