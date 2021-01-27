@@ -2,32 +2,51 @@
 	grid-column: Header;
 
 	font-size: 1.5em;
-	color: white;
 	width: 100vw;
-	height: 100%;
 
 	display: grid;
 	grid-template-columns:
-		[info_bar] 95vw
-		[menu_button] 5vw;
-	align-content: center;
-	justify-content: center;
+		[invested_funds] 12em
+		[info_bar] calc(100% - 16em)
+		[menu_btn] 4em;
+	align-items: center;
+	justify-items: center;
 }
+
 .dark { border: .125em solid blue; }
 .bright { border: .125em solid green; }
 
-.info_bar {
-	grid-column: info_bar;
-
-	height: 100%;
-	width: 100%;
-	color: white;
+.funds_box {
+	display: grid;
+	grid-template-rows:
+		[funds_text] 1fr
+		[invested_funds] 1fr;
+	justify-content: center;
 }
 
-.change_color_btn {
-	grid-column: menu_button;
+.funds_text {
+	grid-row: funds_text;
+	margin: 0 auto 0 auto;
+}
 
+.invested_funds {
+	grid-row: invested_funds;
+	margin: 0 auto 0 auto;
+}
+
+
+.info_bar {
+	grid-column: info_bar;
+}
+
+.menu_btn {
+	grid-column: menu_btn;
 	border: .125em solid orange;
 	color: pink;
-	height: 100%;
+	height: 60%;
+	width: 100%;
+
+	display: grid;
+	align-items: center;
+	justify-items: center;
 }
