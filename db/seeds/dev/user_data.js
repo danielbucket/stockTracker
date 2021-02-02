@@ -1,26 +1,29 @@
 
-exports.seed = knex => {
-  // Deletes ALL existing entries
+exports.seed = function(knex) {
   return knex('user_data').del()
-    .then(() => {
-      // Inserts seed entries
+    .then(function () {
       return knex('user_data').insert([
         {
           id: 1,
-          name: 'Bucket',
-          email: 'danielludwick@gmail.com',
-          api_key: 'N2Fpqbi1pAyG73Lu7pdlDEZPf19OVd_b'
+          last_name: 'bucket',
+          first_name: 'daniel',
+          email: 'danieljbucket@gmail.com',
+          api_key: 'N2Fpqbi1pAyG73Lu7pdlDEZPf19OVd_b',
         },
         {
           id: 2,
-          name: 'defaultUser2',
+          last_name: 'user_2_last',
+          first_name: 'user_2_first',
           email: 'default1User2@mail.com',
+          api_key: 'akdhfaksudfalkbdsuygkfas',
         },
         {
           id: 3,
-          name: 'defaultUser3',
+          last_name: 'user_3_last',
+          fist_name: 'user_3_first',
           email: 'defaultUser3@mail.com',
-        }
+          api_key: 'aidhf3ajhfdlgahdflausl',
+        },
       ]);
     });
 };

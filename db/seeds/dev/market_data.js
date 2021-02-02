@@ -1,8 +1,7 @@
 
-exports.seed = knex => {
-  // Deletes ALL existing entries
+exports.seed = function(knex) {
   return knex('market_data').del()
-    .then(() => {
+    .then(function () {
       return knex('market_data').insert([
         {
           id: 1,
@@ -14,7 +13,7 @@ exports.seed = knex => {
         },
         {
           id: 2,
-          user_data_id: 2,
+          user_data_id: 1,
           ticker: 'NRZ',
           name: 'New Residential Investment',
           shares: 100,
@@ -22,7 +21,7 @@ exports.seed = knex => {
         },
         {
           id: 3,
-          user_data_id: 3,
+          user_data_id: 1,
           ticker: 'T',
           name: 'AT&T',
           shares: 25,

@@ -16,8 +16,10 @@ module.exports = {
   development: {
     client: 'pg',
     connection: 'postgres://localhost/stocktracker',
+    searchPath: ['knex', 'public'],
     useNullAsDefault: true,
     migrations: {
+      tableName: 'stocktracker',
       directory: path.resolve(__dirname, './db/migrations'),
     },
     seeds: {

@@ -6,7 +6,7 @@ const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 
 const app = express();
-const appRouter = require('./router');
+// const appRouter = require('./router');
 const config = require('../webpack.config.js');
 const compiler = webpack(config);
 
@@ -26,6 +26,6 @@ app.get('/', (req,res) => {
 	res.sendFile(path.join(__dirname + '../../public/'));
 });
 
-app.use('/api/v1', appRouter);
+// app.use('/api/v1', appRouter);
 
 app.listen(PORT, () => console.log(`Server is running on port: ${PORT}.`));
